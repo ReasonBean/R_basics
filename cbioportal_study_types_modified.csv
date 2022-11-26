@@ -1,337 +1,67 @@
-name,UMLS CUI
-Acinar Cell Carcinoma of the Pancreas,C0279661
-Acral Melanoma,C0346037
-Acute Lymphoblastic Leukemia,"C0023452, C0751606"
-Acute Lymphoblastic Leukemia,"C0023452, C0751606"
-Acute Myeloid Leukemia,"C0026998, C1879321, C0522631"
-Acute Myeloid Leukemia,"C0026998, C1879321, C0522631"
-Acute Myeloid Leukemia,"C0026998, C1879321, C0522631"
-Acute Myeloid Leukemia,"C0026998, C1879321, C0522631"
-Acute myeloid leukemia or myelodysplastic syndromes,"C0026998, C1879321, C0522631, C3463824"
-Adenoid Cystic Carcinoma,C0010606
-Adenoid Cystic Carcinoma,C0010606
-Adenoid Cystic Carcinoma,C0010606
-Adenoid Cystic Carcinoma,C0010606
-Adenoid Cystic Carcinoma,C0010606
-Adenoid Cystic Carcinoma,C0010606
-Adenoid Cystic Carcinoma Project,C0010606
-Adenoid Cystic Carcinoma of the Breast,C1332167
-Adrenocortical Carcinoma,C0206686
-Adrenocortical Carcinoma,C0206686
-Adult Soft Tissue Sarcomas,C4551687
-Ampullary Carcinoma,C0262401
-Anaplastic Oligodendroglioma and Anaplastic Oligoastrocytoma,"C0334590, C0431108"
-Basal Cell Carcinoma,C0007117
-Bladder Cancer,C0005695
-Bladder Cancer,C0005695
-Bladder Cancer,C0005695
-Bladder Cancer,C0005695
-Bladder Cancer,C0005695
-Bladder Urothelial Carcinoma,C0005695
-Bladder Urothelial Carcinoma,C0005695
-Bladder Urothelial Carcinoma,C0005695
-Bladder Urothelial Carcinoma,C0005695
-Bladder Urothelial Carcinoma,C0005695
-Brain Lower Grade Glioma,C3665419
-Brain Lower Grade Glioma,C3665419
-Brain Tumor PDXs,C0006118
-Breast Cancer,C0006142
-Breast Cancer,C0006142
-Breast Cancer,C0006142
-Breast Cancer,C0006142
-Breast Cancer,C0006142
-Breast Cancer,C0006142
-Breast Cancer,C0006142
-Breast Cancer Xenografts,C0006142
-Breast Fibroepithelial Tumors,C0678222
-Breast Invasive Carcinoma,"C0853879, C0678222"
-Breast Invasive Carcinoma,"C0853879, C0678222"
-Breast Invasive Carcinoma,"C0853879, C0678222"
-Breast Invasive Carcinoma,"C0853879, C0678222"
-Breast Invasive Carcinoma,"C0853879, C0678222"
-Breast Invasive Carcinoma,"C0853879, C0678222"
-Breast Invasive Carcinoma,"C0853879, C0678222"
-Cervical Squamous Cell Carcinoma,C0279671
-Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma,"C1263762, C0279671"
-Cholangiocarcinoma,C0206698
-Cholangiocarcinoma,C0206698
-Cholangiocarcinoma,C0206698
-Cholangiocarcinoma,C0206698
-Cholangiocarcinoma,C0206698
-Cholangiocarcinoma,C0206698
-Chronic Lymphocytic Leukemia,C0023434
-Chronic Lymphocytic Leukemia,C0023434
-Chronic Lymphocytic Leukemia,C0023434
-Chronic lymphocytic leukemia,C0023434
-Clear Cell Renal Cell Carcinoma,"C1333985, C1334978"
-Colon Adenocarcinoma,C0338106
-Colon Cancer,C0699790
-Colorectal Adenocarcinoma,C1319315
-Colorectal Adenocarcinoma,C1319315
-Colorectal Adenocarcinoma,C1319315
-Colorectal Adenocarcinoma,C1319315
-Colorectal Adenocarcinoma,C1319315
-Colorectal Adenocarcinoma Triplets,C1319315
-Colorectal Cancer,C0009402
-Colorectal Cancer,C0009402
-Colorectal Cancer,C0009402
-Combined Hepatocellular and Intrahepatic Cholangiocarcinoma,"C0221287, C0345905"
-Cutaneous Squamous Cell Carcinoma,C0553723
-Cutaneous Squamous Cell Carcinoma,C0553723
-Cutaneous Squamous Cell Carcinoma,C0553723
-Cutaneous T Cell Lymphoma,C0079773
-Cystic Tumor of the Pancreas,"C0030283, C0030299"
-Desmoplastic Melanoma,C1333280
-Diffuse Glioma,C4289690
-Diffuse Large B cell Lymphoma,C0079744
-Diffuse Large B-Cell Lymphoma,C0079744
-Diffuse Large B-Cell Lymphoma,C0079744
-Diffuse Large B-Cell Lymphoma,C0079744
-Diffuse Large B-cell Lymphoma,C0079744
-Disparities in metastatic colorectal cancer between Africans and Americans,C4721579
-Endometrial Cancer,C0476089
-Endometrial Carcinoma,C0476089
-Endometrial Carcinoma MSI,C0476089
-Endometrial Carcinoma cfDNA,C0476089
-Esophageal Adenocarcinoma,C0279628
-Esophageal Adenocarcinoma,C0279628
-Esophageal Cancer-TRAP Project,C0279628
-Esophageal Carcinoma,C0279628
-Esophageal Carcinoma,C0279628
-Esophageal Squamous Cell Carcinoma,C0279626
-Esophageal Squamous Cell Carcinoma,C0279626
-Esophageal/Stomach Cancer,"C0546837, C0024623"
-Esophagogastric Cancer,"C1332166, C0279628"
-Ewing Sarcoma,C0553580
-Gallbladder Cancer,C0235782
-Gallbladder Cancer,C0235782
-Gallbladder Carcinoma,C0235782
-Gastric Adenocarcinoma,C0278701
-Gastric Cancer,C0024623
-Gastrointestinal Stromal Tumor,C0238198
-Germ Cell Tumors,C0205851
-Germ Cell Tumors and Shared Leukemias,C0205851
-Glioblastoma,C0017636
-Glioblastoma,C0017636
-Glioblastoma,C0017636
-Glioblastoma,C0017636
-Glioblastoma Multiforme,C1621958
-Glioblastoma Multiforme,C1621958
-Glioma,C0017638
-Glioma,C0017638
-Head and Neck Squamous Cell Carcinoma,C1168401
-Head and Neck Squamous Cell Carcinoma,C1168401
-Head and Neck Squamous Cell Carcinoma,C1168401
-Head and Neck Squamous Cell Carcinoma,C1168401
-Head and Neck Squamous Cell Carcinoma,C1168401
-Hepatocellular Adenoma,C0206669
-Hepatocellular Carcinoma,C2239176
-Hepatocellular Carcinoma,C2239176
-Hepatocellular Carcinomas,C2239176
-High-Grade Serous Ovarian Cancer,C1140680
-Histiocytosis Cobimetinib,C0019618
-Hypodiploid Acute Lymphoid Leukemia,C0023449
-Insulinoma,C0021670
-Intrahepatic Cholangiocarcinoma,C0345905
-Intrahepatic Cholangiocarcinoma,C0345905
-Intrahepatic Cholangiocarcinoma,C0345905
-Intrahepatic Cholangiocarcinoma,C0345905
-Intrahepatic Cholangiocarcinoma,C0345905
-Juvenile Papillomatosis and Breast Cancer,"C0205875, C0006142"
-Kidney Chromophobe,C1266042
-Kidney Chromophobe,C1266042
-Kidney Chromophobe,C1266042
-Kidney Renal Clear Cell Carcinoma,C0279702
-Kidney Renal Clear Cell Carcinoma,C0279702
-Kidney Renal Clear Cell Carcinoma,C0279702
-Kidney Renal Clear Cell Carcinoma,C0279702
-Kidney Renal Clear Cell Carcinoma,C0279702
-Kidney Renal Papillary Cell Carcinoma,C1306837
-Kidney Renal Papillary Cell Carcinoma,C1306837
-Liver Hepatocellular Adenoma and Carcinomas,"C0206669, C2239176"
-Liver Hepatocellular Carcinoma,C2239176
-Liver Hepatocellular Carcinoma,C2239176
-Liver Hepatocellular Carcinoma,C2239176
-Liver Hepatocellular Carcinoma,C2239176
-Low-Grade Gliomas,C1997217
-Low-Grade Serous Ovarian Cancer,C1140680
-Lung Adenocarcinoma,C0152013
-Lung Adenocarcinoma,C0152013
-Lung Adenocarcinoma,C0152013
-Lung Adenocarcinoma,C0152013
-Lung Adenocarcinoma,C0152013
-Lung Adenocarcinoma,C0152013
-Lung Adenocarcinoma,C0152013
-Lung Adenocarcinoma,C0152013
-Lung Adenocarcinoma,C0152013
-Lung Adenocarcinoma,C0152013
-Lung Adenocarcinoma,C0152013
-Lung Adenocarcinoma,C0152013
-Lung Cancer,C0242379
-Lung Cancer in Never Smokers,C0242379
-Lung Squamous Cell Carcinoma,C0149782
-Lung Squamous Cell Carcinoma,C0149782
-Lung Squamous Cell Carcinoma,C0149782
-Lung Squamous Cell Carcinoma,C0149782
-Lymphoid Neoplasm Diffuse Large B-cell Lymphoma,C0079744
-Lymphoma Cell Lines,C0024299
-MAPK on resistance to anti-HER2 therapy for breast cancer,C0006142
-Malignant Peripheral Nerve Sheath Tumor,C0751690
-Mantle Cell Lymphoma,C4721414
-Mature B-cell malignancies,C1334633
-Medulloblastoma,C0025149
-Medulloblastoma,C0025149
-Medulloblastoma,C0025149
-Medulloblastoma,C0025149
-Medulloblastoma,C0025149
-Melanoma,C0025202
-Melanoma,C0025202
-Melanoma,C0025202
-Melanomas,C0025202
-Meningioma,C0025286
-Merged Cohort of LGG and GBM,C0017638
-Mesothelioma,C0025500
-Mesothelioma,C0025500
-Metaplastic Breast Cancer,C1334708
-Metastatic Biliary Tract Cancers,C0750952
-Metastatic Breast Cancer,C0278488
-Metastatic Breast Cancer,C0278488
-Metastatic Colorectal Cancer,C4721579
-Metastatic Esophagogastric Cancer,"C1332166, C0279628"
-Metastatic Melanoma,C0278883
-Metastatic Melanoma,C0278883
-Metastatic Melanoma,C0278883
-Metastatic Melanoma,C0278883
-Metastatic Non-Small Cell Lung Cancer,C0278987
-Metastatic Prostate Adenocarcinoma,"C0007112, C0936223"
-Metastatic Prostate Adenocarcinoma,"C0007112, C0936223"
-Metastatic Prostate Cancer,C0936223
-Metastatic castration-sensitive prostate cancer,C4302896
-Multiple Myeloma,C0026764
-Myelodysplasia,C0026985
-Myelodysplastic,C3463824
-Myelodysplastic Syndromes,C3463824
-Myeloproliferative Neoplasms,C1292778
-Nasopharyngeal Carcinoma,C2931822
-Neuroblastoma,C0027819
-Neuroblastoma,C0027819
-Neuroblastoma,C0027819
-Neuroendocrine Prostate Cancer,C1328504
-Non-Hodgkin Lymphoma,C0024305
-Non-Small Cell Cancer,C0007131
-Non-Small Cell Lung Cancer,C0007131
-Non-Small Cell Lung Cancer,C0007131
-Non-Small Cell Lung Cancer,C0007131
-Non-Small Cell Lung Cancer,C0007131
-Non-Small Cell Lung Cancer,C0007131
-Nonmuscle Invasive Bladder Cancer,C0005695
-Oral Squamous Cell Carcinoma,C0585362
-Ovarian Cancer - MSK SPECTRUM,C1140680
-Ovarian Serous Cystadenocarcinoma,C1140680
-Ovarian Serous Cystadenocarcinoma,C1140680
-Ovarian Serous Cystadenocarcinoma,C1140680
-Pan-Lung Cancer,C0242379
-Pancreatic Adenocarcinoma,C0281361
-Pancreatic Adenocarcinoma,C0281361
-Pancreatic Adenocarcinoma,C0281361
-Pancreatic Adenocarcinoma,C0281361
-Pancreatic Cancer ,C0235974
-Pancreatic Ductal Adenocarcinoma ,C1335302
-Pancreatic Neuroendocrine Tumors ,"C1328479, C0235974"
-Pancreatic Neuroendocrine Tumors ,"C1328479, C0235974"
-Papillary Thyroid Carcinoma ,C0238463
-Pediatric Acute Lymphoid Leukemia - Phase II ,C0023452
-Pediatric Acute Myeloid Leukemia ,C0220621
-Pediatric Brain Cancer ,C0220603
-Pediatric Ewing Sarcoma ,C0553580
-Pediatric Neuroblastoma ,C4086165
-Pediatric Rhabdoid Tumor ,"C2347613, C0206743"
-Pediatric Wilms' Tumor ,C1333015
-Pheochromocytoma and Paraganglioma,"C0031511, C0030421"
-Pheochromocytoma and Paraganglioma,"C0031511, C0030421"
-Pheochromocytoma and Paraganglioma,"C0031511, C0030421"
-Pilocytic Astrocytoma,C0334583
-Pleural Mesothelioma,C1377913
-Poorly-Differentiated and Anaplastic Thyroid Cancers,"C1266050, C0238461"
-Primary Central Nervous System Lymphoma,C0280803
-Prostate Adenocarcinoma,C0007112
-Prostate Adenocarcinoma,C0007112
-Prostate Adenocarcinoma,C0007112
-Prostate Adenocarcinoma,C0007112
-Prostate Adenocarcinoma,C0007112
-Prostate Adenocarcinoma,C0007112
-Prostate Adenocarcinoma,C0007112
-Prostate Adenocarcinoma,C0007112
-Prostate Adenocarcinoma,C0007112
-Prostate Adenocarcinoma,C0007112
-Prostate Adenocarcinoma,C0007112
-Prostate Adenocarcinoma,C0007112
-Prostate Adenocarcinoma,C0007112
-Prostate Adenocarcinoma Organoids,C0007112
-Prostate Cancer,C0376358
-Prostate Cancer,C0376358
-Prostate Cancer,C0376358
-Prostate Cancer Brain Metastases,C0936223
-Proteogenomic landscape of breast cancer,C0678222
-Race Differences in Prostate Cancer,C0376358
-Rectal Cancer,C0007113
-Rectal Cancer,C0007113
-Recurrent and Metastatic Head & Neck Cancer,C3887461
-Renal Clear Cell Carcinoma,"C0279702, C0007134"
-Renal Non-Clear Cell Carcinoma,C0007134
-Retinoblastoma,C0035335
-Retinoblastoma cfDNA,C0035335
-Rhabdoid Cancer,C0206743
-Rhabdomyosarcoma,C0035412
-Sarcoma,C1261473
-Sarcoma,C1261473
-Sarcoma,C1261473
-Sarcoma,C1261473
-Skin Cutaneous Melanoma,C0151779
-Skin Cutaneous Melanoma,C0151779
-Skin Cutaneous Melanoma,C0151779
-Skin Cutaneous Melanoma,C0151779
-Skin Cutaneous Melanoma,C0151779
-Small Cell Carcinoma of the Ovary,C4721610
-Small Cell Lung Cancer,C0149925
-Small Cell Lung Cancer,C0149925
-Small Cell Lung Cancer,C0149925
-Small-Cell Lung Cancer,C0149925
-Squamous Cell Carcinoma of the Vulva,C0280856
-Stomach Adenocarcinoma,C0278701
-Stomach Adenocarcinoma,C0278701
-Stomach Adenocarcinoma,C0278701
-Stomach Adenocarcinoma,C0278701
-Stomach Adenocarcinoma,C0278701
-Stomach Adenocarcinoma,C0278701
-Testicular Germ Cell Cancer,C0855197
-Testicular Germ Cell Tumors,C0855197
-The Angiosarcoma Project,C0018923
-The Angiosarcoma Project - Count Me In,C0018923
-The Metastatic Breast Cancer Project,C0006142
-The Metastatic Breast Cancer Project,C0006142
-The Metastatic Prostate Cancer Project,C0936223
-Thoracic Cancer,"C0153661, C0039981"
-Thymic Epithelial Tumors,"C0205969, C0040100"
-Thymoma,C0040100
-Thymoma,C0040100
-Thyroid Carcinoma,C0549473
-Thyroid Carcinoma,C0549473
-Unclassified Renal Cell Carcinoma,C0007134
-Upper Tract Urothelial Cancer,C2145472
-Upper Tract Urothelial Carcinoma,C2145472
-Upper Tract Urothelial Carcinoma,C2145472
-Upper Tract Urothelial Carcinoma,C2145472
-Urothelial Carcinoma,C2145472
-Urothelial Carcinoma,C2145472
-Uterine Carcinosarcoma,C0280630
-Uterine Carcinosarcoma,C0280630
-Uterine Carcinosarcoma,C0280630
-Uterine Clear Cell Carcinoma,C0280630
-Uterine Corpus Endometrial Carcinoma,C1704376
-Uterine Corpus Endometrial Carcinoma,C1704376
-Uterine Corpus Endometrial Carcinoma,C1704376
-Uterine Sarcoma/Mesenchymal,C0338113
-Uveal Melanoma,C0220633
-Uveal Melanoma,C0220633
-Uveal Melanoma,C0220633
+name,UMLS CUI,,,,,,
+Breast Cancer,C0006142,,,,,,
+Non-Small Cell Lung Cancer,C0007131,,,,,,
+Esophagogastric Cancer,"C1332166, C0279628",,,,,,
+Colorectal Cancer,C0009402,,,,,,
+Glioblastoma,C0017636,,,,,,
+Endometrial Cancer,C0476089,,,,,,
+Ovarian Epithelial Tumor,C4721610,,,,,,
+Head and Neck Squamous Cell Carcinoma,C1168401,,,,,,
+Glioma,C0017638,,,,,,
+Renal Clear Cell Carcinoma,"C0279702, C0007134",,,,,,
+Thyroid Cancer,C0549473,,,,,,
+Prostate Cancer,C0376358,,,,,,
+Melanoma,C0025202,,,,,,
+Bladder Cancer,C0005695,,,,,,
+Hepatobiliary Cancer,C2239176,,,,,,
+Renal Non-Clear Cell Carcinoma,C0007134,,,,,,
+Cervical Cancer,C4048328,,,,,,
+Sarcoma,C1261473,,,,,,
+Leukemia,C0023467,,,,,,
+Pancreatic Cancer ,C0235974,,,,,,
+Pheochromocytoma,C0031511,,,,,,
+Thymic Epithelial Tumors,"C0205969, C0040100",,,,,,
+Adrenocortical Carcinoma,C0206686,,,,,,
+Pleural Mesothelioma,C0812413,,,,,,
+Non-Seminomatous Germ Cell Tumor,C1266158,,,,,,
+Ocular Melanoma,C0220633,,,,,,
+Seminoma,C0036631,,,,,,
+Mature B-Cell Neoplasms,C0079744,,,,,,
+Cholangiocarcinoma,C0206698,,,,,,
+Paraganglioma,C0030421,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
