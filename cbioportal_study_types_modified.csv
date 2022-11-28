@@ -1,31 +1,31 @@
-name,UMLS CUI
-Breast Cancer,C0006142
-Non-Small Cell Lung Cancer,C0007131
-Esophagogastric Cancer,"C1332166, C0279628"
-Colorectal Cancer,C0009402
-Glioblastoma,C0017636
-Endometrial Cancer,C0476089
-Ovarian Epithelial Tumor,C4721610
-Head and Neck Squamous Cell Carcinoma,C1168401
-Glioma,C0017638
-Renal Clear Cell Carcinoma,"C0279702, C0007134"
-Thyroid Cancer,C0549473
-Prostate Cancer,C0376358
-Melanoma,C0025202
-Bladder Cancer,C0005695
-Hepatobiliary Cancer,C2239176
-Renal Non-Clear Cell Carcinoma,C0007134
-Cervical Cancer,C4048328
-Sarcoma,C1261473
-Leukemia,C0023467
-Pancreatic Cancer,C0235974
-Pheochromocytoma,C0031511
-Thymic Epithelial Tumors,"C0205969, C0040100"
-Adrenocortical Carcinoma,C0206686
-Pleural Mesothelioma,C0812413
-Non-Seminomatous Germ Cell Tumor,C1266158
-Ocular Melanoma,C0220633
-Seminoma,C0036631
-Mature B-Cell Neoplasms,C0079744
-Cholangiocarcinoma,C0206698
-Paraganglioma,C0030421
+name,UMLS CUI,PANDRUGS_CANCER
+Breast Cancer,C0006142,BREAST
+Non-Small Cell Lung Cancer,C0007131,LUNG
+Esophagogastric Cancer,"C1332166, C0279628",ESOPHAGUS
+Colorectal Cancer,C0009402,COLON
+Glioblastoma,C0017636,BRAIN
+Endometrial Cancer,C0476089,UTERUS
+Ovarian Epithelial Tumor,C4721610,OVARY
+Head and Neck Squamous Cell Carcinoma,C1168401,HEAD_AND_NECK
+Glioma,C0017638,BRAIN
+Renal Clear Cell Carcinoma,"C0279702, C0007134",KIDNEY
+Thyroid Cancer,C0549473,THYROID
+Prostate Cancer,C0376358,PROSTATE
+Melanoma,C0025202,SKIN
+Bladder Cancer,C0005695,BLADDER
+Hepatobiliary Cancer,C2239176,LIVER
+Renal Non-Clear Cell Carcinoma,C0007134,KIDNEY
+Cervical Cancer,C4048328,CERVIX
+Sarcoma,C1261473,SOFT_TISSUE
+Leukemia,C0023467,BONE_MARROW
+Pancreatic Cancer,C0235974,PANCREAS
+Pheochromocytoma,C0031511,ADRENAL_GLAND
+Thymic Epithelial Tumors,"C0205969, C0040100",THYROID
+Adrenocortical Carcinoma,C0206686,ADRENAL_GLAND
+Pleural Mesothelioma,C0812413,LUNG
+Non-Seminomatous Germ Cell Tumor,C1266158,TESTIS
+Ocular Melanoma,C0220633,RETINA
+Seminoma,C0036631,TESTIS
+Mature B-Cell Neoplasms,C0079744,BLOOD
+Cholangiocarcinoma,C0206698,LIVER
+Paraganglioma,C0030421,ADRENAL_GLAND
