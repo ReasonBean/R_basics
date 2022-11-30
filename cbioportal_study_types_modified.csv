@@ -1,31 +1,31 @@
-name,UMLS CUI,PANDRUGS_CANCER
-Breast Cancer,C0006142,BREAST
-Non-Small Cell Lung Cancer,C0007131,LUNG
-Esophagogastric Cancer,"C1332166, C0279628",ESOPHAGUS
-Colorectal Cancer,C0009402,COLON
-Glioblastoma,C0017636,BRAIN
-Endometrial Cancer,C0476089,UTERUS
-Ovarian Epithelial Tumor,C4721610,OVARY
-Head and Neck Squamous Cell Carcinoma,C1168401,HEAD_AND_NECK
-Glioma,C0017638,BRAIN
-Renal Clear Cell Carcinoma,"C0279702, C0007134",KIDNEY
-Thyroid Cancer,C0549473,THYROID
-Prostate Cancer,C0376358,PROSTATE
-Melanoma,C0025202,SKIN
-Bladder Cancer,C0005695,BLADDER
-Hepatobiliary Cancer,C2239176,LIVER
-Renal Non-Clear Cell Carcinoma,C0007134,KIDNEY
-Cervical Cancer,C4048328,CERVIX
-Sarcoma,C1261473,SOFT_TISSUE
-Leukemia,C0023467,BONE_MARROW
-Pancreatic Cancer,C0235974,PANCREAS
-Pheochromocytoma,C0031511,ADRENAL_GLAND
-Thymic Epithelial Tumors,"C0205969, C0040100",THYROID
-Adrenocortical Carcinoma,C0206686,ADRENAL_GLAND
-Pleural Mesothelioma,C0812413,LUNG
-Non-Seminomatous Germ Cell Tumor,C1266158,TESTIS
-Ocular Melanoma,C0220633,RETINA
-Seminoma,C0036631,TESTIS
-Mature B-Cell Neoplasms,C0079744,BLOOD
-Cholangiocarcinoma,C0206698,LIVER
-Paraganglioma,C0030421,ADRENAL_GLAND
+name,cBioPorta_studyname,UMLS CUI,PANDRUGS_CANCER
+Breast Cancer,brca_tcga_pan_can_atlas_2018,C0006142,BREAST
+Non-Small Cell Lung Cancer,"luad_tcga_pan_can_atlas_2018, lusc_tcga_pan_can_atlas_2018",C0007131,LUNG
+Esophagogastric Cancer,"stad_tcga_pan_can_atlas_2018, esca_tcga_pan_can_atlas_2018","C1332166, C0279628",ESOPHAGUS
+Colorectal Cancer,coadread_tcga_pan_can_atlas_2018,C0009402,COLON
+Glioblastoma,gbm_tcga_pan_can_atlas_2018,C0017636,BRAIN
+Endometrial Cancer,"ucec_tcga_pan_can_atlas_2018, ucs_tcga_pan_can_atlas_2018",C0476089,UTERUS
+Ovarian Epithelial Tumor,ov_tcga_pan_can_atlas_2018,C4721610,OVARY
+Head and Neck Squamous Cell Carcinoma,hnsc_tcga_pan_can_atlas_2018,C1168401,HEAD_AND_NECK
+Glioma,lgg_tcga_pan_can_atlas_2018,C0017638,BRAIN
+Renal Clear Cell Carcinoma,kirc_tcga_pan_can_atlas_2018,"C0279702, C0007134",KIDNEY
+Thyroid Cancer,thca_tcga_pan_can_atlas_2018,C0549473,THYROID
+Prostate Cancer,prad_tcga_pan_can_atlas_2018,C0376358,PROSTATE
+Melanoma,skcm_tcga_pan_can_atlas_2018,C0025202,SKIN
+Bladder Cancer,blca_tcga_pan_can_atlas_2018,C0005695,BLADDER
+Hepatobiliary Cancer,lihc_tcga_pan_can_atlas_2018,C2239176,LIVER
+Renal Non-Clear Cell Carcinoma,"kirp_tcga_pan_can_atlas_2018,kich_tcga_pan_can_atlas_2018",C0007134,KIDNEY
+Cervical Cancer,cesc_tcga_pan_can_atlas_2018,C4048328,CERVIX
+Sarcoma,sarc_tcga_pan_can_atlas_2018,C1261473,SOFT_TISSUE
+Leukemia,laml_tcga_pan_can_atlas_2018,C0023467,BONE_MARROW
+Pancreatic Cancer,paad_tcga_pan_can_atlas_2018,C0235974,PANCREAS
+Pheochromocytoma,pcpg_tcga_pan_can_atlas_2018,C0031511,ADRENAL_GLAND
+Thymic Epithelial Tumors,thym_tcga_pan_can_atlas_2018,"C0205969, C0040100",THYROID
+Adrenocortical Carcinoma,"acc_tcga_pan_can_atlas_2018, meso_tcga_pan_can_atlas_2018",C0206686,ADRENAL_GLAND
+Pleural Mesothelioma,meso_tcga_pan_can_atlas_2018,C0812413,LUNG
+Non-Seminomatous Germ Cell Tumor,tgct_tcga_pan_can_atlas_2018,C1266158,TESTIS
+Ocular Melanoma,uvm_tcga_pan_can_atlas_2018,C0220633,RETINA
+Seminoma,tgct_tcga_pan_can_atlas_2018,C0036631,TESTIS
+Mature B-Cell Neoplasms,dlbc_tcga_pan_can_atlas_2018,C0079744,BLOOD
+Cholangiocarcinoma,chol_tcga_pan_can_atlas_2018,C0206698,LIVER
+Miscellaneous Neuroepithelial Tumor,pcpg_tcga_pan_can_atlas_2018,C0030421,ADRENAL_GLAND
