@@ -1,7 +1,7 @@
 name,cBioPorta_studyname,UMLS CUI,PANDRUGS_CANCER
 Breast Cancer,brca_tcga_pan_can_atlas_2018,C0006142,BREAST
-Non-Small Cell Lung Cancer,"luad_tcga_pan_can_atlas_2018, lusc_tcga_pan_can_atlas_2018",C0007131,LUNG
-Esophagogastric Cancer,"stad_tcga_pan_can_atlas_2018, esca_tcga_pan_can_atlas_2018","C1332166, C0279628",ESOPHAGUS
+Non-Small Cell Lung Cancer,"luad_tcga_pan_can_atlas_2018,lusc_tcga_pan_can_atlas_2018",C0007131,LUNG
+Esophagogastric Cancer,"stad_tcga_pan_can_atlas_2018,esca_tcga_pan_can_atlas_2018","C1332166, C0279628",ESOPHAGUS
 Colorectal Cancer,coadread_tcga_pan_can_atlas_2018,C0009402,COLON
 Glioblastoma,gbm_tcga_pan_can_atlas_2018,C0017636,BRAIN
 Endometrial Cancer,"ucec_tcga_pan_can_atlas_2018, ucs_tcga_pan_can_atlas_2018",C0476089,UTERUS
@@ -21,7 +21,7 @@ Leukemia,laml_tcga_pan_can_atlas_2018,C0023467,BONE_MARROW
 Pancreatic Cancer,paad_tcga_pan_can_atlas_2018,C0235974,PANCREAS
 Pheochromocytoma,pcpg_tcga_pan_can_atlas_2018,C0031511,ADRENAL_GLAND
 Thymic Epithelial Tumors,thym_tcga_pan_can_atlas_2018,"C0205969, C0040100",THYROID
-Adrenocortical Carcinoma,"acc_tcga_pan_can_atlas_2018, meso_tcga_pan_can_atlas_2018",C0206686,ADRENAL_GLAND
+Adrenocortical Carcinoma,"acc_tcga_pan_can_atlas_2018,meso_tcga_pan_can_atlas_2018",C0206686,ADRENAL_GLAND
 Pleural Mesothelioma,meso_tcga_pan_can_atlas_2018,C0812413,LUNG
 Non-Seminomatous Germ Cell Tumor,tgct_tcga_pan_can_atlas_2018,C1266158,TESTIS
 Ocular Melanoma,uvm_tcga_pan_can_atlas_2018,C0220633,RETINA
