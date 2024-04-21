@@ -1,0 +1,76 @@
+### Chip DB, Provides annotation information for the microarray platform, 
+# and this database package contains various biological information such as gene identifiers, gene names, and location of genes for probes present in the microarray chip
+library(hgu95av2.db)
+library(AnnotationDbi)
+ls("package:hgu95av2.db")
+View(hgu95av2_dbInfo())
+columns(hgu95av2.db)
+keytypes(hgu95av2.db)
+
+head(keys(hgu95av2.db, keytype = "SYMBOL"))
+
+# ⭐key를 기반으로 필요한 데이터 찾기
+# Obtain information about a specific probe ID
+probes <- head(keys(hgu95av2.db, keytype = "PROBEID"))
+
+# keytype 매개변수는 keys에 제공된 값이 프로브 ID임을 명확하게 지정(권장됨)
+info.v1 <- AnnotationDbi::select(hgu95av2.db, keys = probes, columns = c("GENENAME", "ENTREZID", "SYMBOL"), keytype = "PROBEID") 
+info.v2 <- AnnotationDbi::mapIds(hgu95av2.db, keys = probes, column = c("GENENAME"), keytype = "PROBEID")
+
+# Output the results
+print(info.v1)
+View(info.v2)
+
+### Org DB, Contains annotation information for the Homosapiens (human) gene
+library(org.Hs.eg.db)
+
+# ⭐key를 기반으로 필요한 데이터 찾기
+gene_ids <- AnnotationDbi::select(org.Hs.eg.db, 
+                                  keys = c("BRCA1", "TP53"), 
+                                  columns = c("ENTREZID", "GENENAME"), 
+                                  keytype = "SYMBOL")
+print(gene_ids)
+
+uniKeys<-head(keys(org.Hs.eg.db, keytype = "UNIPROT"))
+uniprot_code<-AnnotationDbi::select(org.Hs.eg.db,
+                                    keys = uniKeys,
+                                    columns = c("SYMBOL", "PATH"),
+                                    keytype = "UNIPROT")
+print(uniprot_code)
+
+### Merge from DEG list
+load(system.file("extdata", "resultTable.Rda", 
+                 package="AnnotationDbi"))
+
+annots <- AnnotationDbi::select(org.Hs.eg.db, 
+                 keys=rownames(resultTable), # resultTable의 rownames를 key값으로 이용
+                 columns=c("SYMBOL","GENENAME"), 
+                 keytype="ENTREZID")
+
+# 첫 번째 데이터프레임에서는 Row names가 두 번째 데이터프레임에서는 ENTREZID가 서로 조인속성임을 의미
+# 두 데이터프레임의 조인속성 이름이 다르기 때문에 by.x, by.y로 지정해준것것
+resultTable<-merge(resultTable, annots, by.x=0, by.y="ENTREZID") 
+View(resultTable)
+
+### GO DB, Gene Ontology 
+library(GO.db)
+keytypes(GO.db) # "DEFINITION" "GOID"       "ONTOLOGY"   "TERM"
+
+GOIDs<-c("GO:0042254", "GO:0044183")
+GOID_info<-AnnotationDbi::select(GO.db, keys=GOIDs, columns="DEFINITION", keytype="GOID")
+GOID_info
+
+### Tx DB, Including UCSC's 'knownGene' annotation based on human genome build HG19 (GRCh37)
+library(TxDb.Hsapiens.UCSC.hg19.knownGene)
+txdb<-TxDb.Hsapiens.UCSC.hg19.knownGene
+
+# 유전자 정보 조회
+genes <- genes(txdb)
+
+# 특정 유전자의 전사체 정보 조회
+transcripts <- transcripts(txdb, filter = list(gene_id = "1234"))
+
+keytypes(txdb)
+keys<-head(keys(txdb, keytype = "GENEID"))
+cols<-c("TXID", "TXSTART")
+AnnotationDbi::select(txdb, keys=keys, columns=cols, keytype="GENEID")
