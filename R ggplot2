@@ -1,0 +1,171 @@
+### ⭐ggplot2
+vignette(ggplot2)
+
+library(ggplot2)
+# ggplot() 함수로 시작해서, aes() 함수로 aesthetic 매핑을 설정하고, 다양한 geom_ 함수로 그래프 유형을 추가하는 구조
+
+## scatter plot
+# basic
+ggplot(data = mtcars, aes(x = hp, y = mpg)) +
+  geom_point() +
+  labs(title = "Scatter Plot of MPG vs Horsepower",
+       x = "Horsepower",
+       y = "Miles per Gallon") +
+  theme(plot.title = element_text(hjust = 0.5)) # center align
+
+# aesthetic 1: 점의 색상을 hp 값에 따라 다르게 설정
+ggplot(data = mtcars, aes(x = hp, y = mpg)) +
+  geom_point(aes(color=wt, hp, 30.1-0.068*hp)) + # weight add
+  labs(title = "Scatter Plot of MPG vs Horsepower",
+       x = "Horsepower",
+       y = "Miles per Gallon") +
+  theme(plot.title = element_text(hjust = 0.5)) # center align
+
+# aesthetic 2: 점의 크기와 색상을 hp값에 따라 다르게 설정
+ggplot(data = mtcars, aes(x = hp, y = mpg)) +
+  geom_point(aes(color = hp, size = hp)) +  # 마력에 따라 색상과 크기 조정
+  scale_color_gradient(low = "blue", high = "red") +  # 색상 그라디언트 설정
+  labs(title = "Scatter Plot of MPG vs Horsepower",
+       x = "Horsepower",
+       y = "Miles per Gallon") +
+  theme(plot.title = element_text(hjust = 0.5)) +  # 제목 중앙 정렬
+  theme_minimal()  # 미니멀 테마 적용
+
+# aesthetic 3: grid line과 axis text customizing
+p7<-ggplot(data = mtcars, aes(x = hp, y = mpg)) +
+  geom_point(aes(color = hp, size = hp)) +
+  scale_color_gradient(low = "blue", high = "red") +
+  labs(title = "Scatter Plot of MPG vs Horsepower",
+       x = "Horsepower",
+       y = "Miles per Gallon") +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),  # 제목 스타일
+        axis.title.x = element_text(size = 14, face = "bold"),  # X축 제목 스타일
+        axis.title.y = element_text(size = 14, face = "bold"),  # Y축 제목 스타일
+        axis.text = element_text(color = "gray40"),  # 축 텍스트 색상
+        panel.grid.major = element_line(color = "gray80"),  # 주 그리드 라인 색상
+        panel.grid.minor = element_line(color = "gray90", linetype = "dotted"))  # 부 그리드 라인 스타일
+
+# asethetic 4: legend 설정
+ggplot(data = mtcars, aes(x = hp, y = mpg)) +
+  geom_point(aes(color = hp, size = hp)) +
+  scale_color_gradient(low = "blue", high = "red") +
+  labs(title = "Scatter Plot of MPG vs Horsepower",
+       x = "Horsepower",
+       y = "Miles per Gallon") +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5),
+        legend.position = "right") +  # 범례 위치 조정
+  guides(color = guide_legend(title = "Horsepower"),  # 범례에 점의 크기와 색깔을 통합해서 표시시
+         size = guide_legend(title = "Horsepower"))
+
+## histogram
+# aesthetic 1
+ggplot(data = mtcars, aes(x = mpg)) +
+  geom_histogram(bins = 10, fill = "blue", color = "black") +
+  labs(title = "Histogram of MPG",
+       x = "Miles per Gallon",
+       y = "Frequency") +
+  theme(plot.title = element_text(hjust = 0.5)) # center align
+
+# aesthetic 2
+ggplot(data = mtcars, aes(x = mpg)) +
+  geom_histogram(bins = 10, fill = "#3498db", color = "#1f2d3d", alpha = 0.7) +  # Custom colors with transparency
+  scale_x_continuous(breaks = seq(10, 35, by = 5)) +  # Custom x-axis breaks
+  scale_y_continuous(labels = scales::comma) +  # Comma formatted y-axis labels
+  labs(title = "Histogram of Miles per Gallon",
+       subtitle = "From the mtcars Dataset",
+       x = "Miles per Gallon",
+       y = "Frequency",
+       caption = "Source: Motor Trend Car Road Tests 1974") +
+  theme_minimal() +  # Minimal theme
+  theme(plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
+        plot.subtitle = element_text(color = "grey60"),
+        axis.title.x = element_text(size = 14, face = "bold"),
+        axis.title.y = element_text(size = 14, face = "bold"),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        plot.caption = element_text(size = 8, hjust = 0, face = "italic"),
+        legend.position = "none") +  # Customizing legend, text, and title positions
+  geom_vline(aes(xintercept = mean(mpg, na.rm = TRUE)), color = "red", linetype = "dashed", size = 1) +  # Add mean line
+  annotate("text", x = 25, y = 5, label = "Mean MPG", color = "red")  # Annotation near the mean line
+
+## boxplot
+# aesthetic 1: basic
+ggplot(data = mtcars, aes(x = factor(cyl), y = mpg)) +
+  geom_boxplot(fill = "tomato", color = "black") +
+  labs(title = "Boxplot of MPG by Number of Cylinders",
+       x = "Number of Cylinders",
+       y = "Miles per Gallon") +
+  theme(plot.title = element_text(hjust = 0.5)) # center align
+
+# aesthetic 2: 
+ggplot(data = mtcars, aes(x = factor(cyl), y = mpg)) +
+  geom_boxplot(fill = "tomato", color = "black", outlier.colour = "blue", outlier.shape = 8, outlier.size = 3) +
+  scale_y_continuous(breaks = seq(10, 35, by = 5)) +  # Custom y-axis breaks
+  labs(title = "Boxplot of MPG by Number of Cylinders",
+       subtitle = "Visualizing fuel efficiency variability among car models",
+       x = "Number of Cylinders",
+       y = "Miles per Gallon",
+       caption = "Data from Motor Trend Car Road Tests 1974") +
+  theme_bw() +  # Use the black and white theme for a clean layout
+  theme(plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, margin = margin(b = 10)),
+        plot.caption = element_text(size = 8, face = "italic"),
+        axis.title.x = element_text(size = 14, face = "bold"),
+        axis.title.y = element_text(size = 14, face = "bold"),
+        axis.text.x = element_text(angle = 0, vjust = 0.5, color = "gray20"),
+        axis.text.y = element_text(color = "gray20"),
+        panel.grid.major = element_line(color = "gray80"),
+        panel.grid.minor = element_blank(),  # Remove minor grid lines
+        legend.position = "none") +
+  geom_jitter(width = 0.2, size = 2, color = "darkgray", alpha = 0.5)  # Add jitter to show data distribution
+
+# aesthetic 3: facet_grid by ToothGrowth
+ToothGrowth$dose<-as.factor(ToothGrowth$dose)
+
+ggplot(data = ToothGrowth, aes(x = dose, y = len, group=dose))+
+  geom_boxplot(aes(fill=dose))+
+  # facet_grid(supp~.) # split in vertical direction
+  # facet_grid(.~supp) # split in horizontal direction
+  # facet_grid(dose~supp) # rows are dose and columns are supp
+  # facet_grid(supp~dose) # rows are supp and columns are dose
+  facet_wrap(~dose)
+
+## barplot
+mtc.sum<-dplyr::summarise(group_by(mtcars, gear), mpg=mean(mpg))
+
+ggplot(mtc.sum, aes(x = factor(gear), y = mpg)) +  # Convert gear to factor for categorical plotting
+  geom_bar(stat = "identity", fill = "steelblue", color = "black") +  # Use identity stat for pre-summarized data
+  labs(title = "Average MPG by Gear",
+       x = "Number of Gears",
+       y = "Average Miles per Gallon") +
+  scale_x_discrete(labels=c("Three","Four","Five"))+
+  theme_minimal() +  # Using a minimal theme for a clean look
+  theme(plot.title = element_text(hjust = 0.5))  # Center-align the title
+
+# aesthetic 1
+# Enhanced and beautified bar plot
+ggplot(mtc.sum, aes(x = factor(gear), y = mpg)) + 
+  geom_bar(stat = "identity", fill = "#3498db", color = "#2c3e50", width = 0.7) +  # Custom colors and bar width
+  labs(title = "Average MPG by Gear",
+       x = "Number of Gears",
+       y = "Average Miles per Gallon") +
+  scale_x_discrete(labels = c("Three", "Four", "Five")) +  # Custom labels for gear numbers
+  theme_minimal(base_size = 14) +  # Using a minimal theme with adjusted base font size
+  theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 16, color = "#34495e"),  # Bold and colored title
+        plot.background = element_rect(fill = "#ecf0f1", color = NA),  # Light grey background for the plot area
+        panel.background = element_rect(fill = "#ecf0f1"),  # Match plot background
+        panel.grid.major = element_line(color = "#bdc3c7"),  # Lighter grid lines
+        panel.grid.minor = element_blank(),  # Remove minor grid lines
+        axis.title = element_text(face = "bold", size = 14, color = "#2c3e50"),  # Bold and colored axis titles
+        axis.text = element_text(color = "#2c3e50"),  # Colored axis text
+        legend.position = "none")  # Hide legend if not needed
+
+## lineplot
+mtcars_sorted <- mtcars[order(mtcars$wt),]
+ggplot(data = mtcars_sorted, aes(x = wt, y = mpg)) +
+  geom_line() +
+  labs(title = "Line Graph of MPG by Weight",
+       x = "Weight (1000 lbs)",
+       y = "Miles per Gallon") +
+  theme(plot.title = element_text(hjust = 0.5)) # center align
