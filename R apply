@@ -1,0 +1,13 @@
+### apply function
+## apply
+apply(iris[,1:4], 1, mean) # column 1 to 4, by row, apply mean(it is fault)
+apply(iris[,1:4], 2, mean) # column 1 to 4, by col, apply mean
+
+## lapply
+lapply(iris[,1:4], mean) # return to list
+
+## sapply
+sapply(iris[,1:4], mean, simplify = F) # it is same to apply(iris[,1:4], 2, mean)
+
+## tapply
+tapply(iris$Sepal.Length, iris$Species, mean) # Function is applied to each index for data
