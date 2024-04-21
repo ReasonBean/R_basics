@@ -35,3 +35,12 @@ density <- dnorm(0, mean = 0, sd = 1) # Calculate the probability density of x =
 
 ## uniform distribution
 runif(5, 0, 1) # choose 10 numbers with min=0, max=1 uniform distribution
+
+### linear regression
+lm.res<-lm(iris$Petal.Width ~ iris$Petal.Length) # simple linear regression model
+lm.res<-lm(Petal.Width~., data=iris) # multiple linear regression model
+plot(iris$Petal.Length, iris$Petal.Width) # plot
+abline(lm.res) # regression line
+
+lm.res$coeff[1] # intercept
+lm.res$coeff[2] # iris$Petal.Length
