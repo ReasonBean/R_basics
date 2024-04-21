@@ -1,0 +1,67 @@
+## ⭐⭐⭐⭐⭐ dplyr
+# select
+dplyr::select(iris, 5, 3:4) # select 5, 3, and 4 column
+dplyr::select(iris, starts_with("Petal")) # select all starts with Petal column
+dplyr::select(iris, -Species) # select all columns without Species column
+dplyr::select(iris, contains("length")) # select all columns with length column
+dplyr::select(iris, ends_with("length")) # select all ends with length column
+dplyr::select(iris, matches("^s.+")) # select columns starts with s
+
+# filter
+dplyr::filter(iris, Species=="virginica") # select Species column that has virginica
+dplyr::filter(iris, Petal.Length>6) # select Petal.Length column that has more value than 6
+dplyr::filter(iris, between(Petal.Length, 3, 3.5)) # select Petal.Length column that has value between 3 and 3.5
+
+# arrange
+dplyr::arrange(filter(iris, between(Petal.Length, 3, 3.5)), Petal.Length) # ascending Petal.Length
+dplyr::arrange(filter(iris, between(Petal.Length, 3, 3.5)), desc(Petal.Length)) # descending Petal.Length
+dplyr::arrange(filter(iris, between(Petal.Length, 3, 3.5)), Petal.Length, desc(Sepal.Length)) # ascending Petal.Length, descending Sepal.Length
+
+# arrange using pipeline
+result <- iris %>%
+  filter(between(Petal.Length, 3, 3.5)) %>%
+  arrange(Petal.Length)
+
+# mutate
+dplyr::mutate(iris, myvector=Sepal.Width^3) # data frame fusion
+
+# summarize
+dplyr::summarise(iris, varmean=mean(Sepal.Length)) # Sepal.Length's mean print
+
+# group_by
+summary_iris <- iris %>%
+  group_by(Species) %>%
+  summarise(
+    Avg_Sepal_Length = mean(Sepal.Length),
+    Avg_Sepal_Width = mean(Sepal.Width),
+    Avg_Petal_Length = mean(Petal.Length),
+    Avg_Petal_Width = mean(Petal.Width)
+  )
+
+dplyr::summarise(group_by(iris, Species), Avg_Sepal_Length = mean(Sepal.Length),
+                 Avg_Sepal_Width = mean(Sepal.Width),
+                 Avg_Petal_Length = mean(Petal.Length),
+                 Avg_Petal_Width = mean(Petal.Width))
+
+# join
+df1 <- data.frame(
+  ID = c(1, 2, 3, 4),
+  Name = c("Alice", "Bob", "Charlie", "David")
+)
+
+df2 <- data.frame(
+  ID = c(3, 4, 5, 6),
+  Score = c(85, 90, 75, 88)
+)
+
+inner_result <- inner_join(df1, df2, by = "ID")
+print(inner_result)
+
+left_result <- left_join(df1, df2, by = "ID")
+print(left_result)
+
+right_result <- right_join(df1, df2, by = "ID")
+print(right_result)
+
+full_result <- full_join(df1, df2, by = "ID")
+print(full_result)
