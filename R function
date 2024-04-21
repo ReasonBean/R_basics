@@ -1,0 +1,13 @@
+### if else in R
+x<-2:-2
+ifelse(x>=0, x, -x)
+ifelse(x>=0, log(x), NA)
+
+### function with recursive
+recursive<-function(vec){
+  if(length(vec)==1){ # If only one element of the vector remains (when 20), return only by squared
+    return(vec[1]^2)
+  }
+  return(vec[1]^2+recursive(vec[-1])) # Squared for the first element and moved the remaining elements back to a recursive function, returning the final value at the end of the operation
+  # return(vec[1]^2+recursive(vec[2:length(vec)])) it is possible
+}
