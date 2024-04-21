@@ -25,3 +25,13 @@ factorial(iris$Sepal.Length) # factorial with integer
 cos(iris$Sepal.Length)
 sin(iris$Sepal.Length)
 tan(iris$Sepal.Length)
+
+### statistical function
+## normal distribution
+random_numbers <- rnorm(5, mean = 0, sd = 1) # choose 5 numbers with mean=0, sd=1 normal distribution
+quantile_value <- qnorm(0.975, mean = 0, sd = 1) # Calculate values corresponding to the top 2.5% in a normal distribution with a mean=0, sd=1
+cumulative_prob <- pnorm(1.96, mean = 0, sd = 1) # Calculate the cumulative probability of x <= 1.96 from a normal distribution with a mean=0, sd=1
+density <- dnorm(0, mean = 0, sd = 1) # Calculate the probability density of x = 0 in a normal distribution with a mean=0, sd=1, y score
+
+## uniform distribution
+runif(5, 0, 1) # choose 10 numbers with min=0, max=1 uniform distribution
