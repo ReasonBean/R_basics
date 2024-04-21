@@ -1,0 +1,18 @@
+### Packages
+## Manual
+vignette("ggplot2")
+
+## heatmap and pheatmap
+df<-scale(mtcars) # scaling must be conducted to make a heatmap, pheatmap plot
+heatmap(df, scale = "row") # Built-in function
+
+library(pheatmap)
+pheatmap::pheatmap(df)
+
+pheatmap::pheatmap(df, 
+         # Cluster_rows and cluster_cols: Cluster rows and columns respectively, which group rows and columns with similar patterns.
+         cluster_rows = T, 
+         cluster_cols = T,
+         main = "Heatmap of mtcars",
+         color = colorRampPalette(c("navy", "white", "firebrick"))(100),
+         border_color = NA)
