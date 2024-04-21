@@ -1,0 +1,88 @@
+### plotly, Gviz, GenomicRanges
+## plotly
+library(plotly)
+ggplotly(p7) # mouse pointer
+
+## Gviz and GenomicRanges
+library(Gviz)
+library(GenomicRanges)
+data("cpgIslands")
+chr<-as.character(unique(seqnames(cpgIslands)))
+gen<-genome(cpgIslands)
+atrack<-AnnotationTrack(cpgIslands, name="CpG")
+plotTracks(atrack)
+
+# GenomeAxisTrack: genome plot
+gtrack<-GenomeAxisTrack()
+plotTracks(list(gtrack,atrack))
+
+# IdeogramTrack: 
+itrack<-IdeogramTrack(genome=gen, chromosome = chr)
+plotTracks(list(itrack, gtrack, atrack))
+
+# Gene Region Track
+data("geneModels")
+grtrack<-GeneRegionTrack(geneModels, genome = gen,
+                         chromosome = chr, name = "Gene Model")
+plotTracks(list(itrack, gtrack, atrack, grtrack))
+
+plotTracks(list(itrack, gtrack, atrack, grtrack), from=26700000, to=26750000)
+
+# Track plot 꾸미기
+grtrack <- GeneRegionTrack(geneModels, genome = gen, 
+                           chromosome = chr, 
+                           name = "Gene Model",
+                           transcriptAnnotation = "symbol",
+                           background.title = "brown")
+displayPars(grtrack) <- list(background.panel = "#FFFEDB", col = NULL)
+plotTracks(list(itrack, gtrack, atrack, grtrack))
+plotTracks(list(itrack, gtrack, atrack, grtrack), 
+            background.panel = "#FFFEDB", background.title = "darkblue")
+
+# ☢️Available Display Pars
+dp <- availableDisplayPars(grtrack)
+tail(dp)
+
+# Reverse Strand
+plotTracks(list(itrack, gtrack, atrack, grtrack), reverseStrand = TRUE)
+
+# ☢️Genome Axis Track
+axisTrack <- GenomeAxisTrack()
+plotTracks(axisTrack, from = 1e6, to = 9e6)
+axisTrack <- GenomeAxisTrack(range=IRanges(start = c(2e6, 4e6), end = c(3e6, 7e6), names = rep("N-stretch", 2)))
+plotTracks(axisTrack, from = 1e6, to = 9e6)
+plotTracks(axisTrack, from = 1e6, to = 9e6, showId = TRUE)
+plotTracks(axisTrack, from = 1e6, to = 9e6, add53 = TRUE, add35 = TRUE)
+plotTracks(axisTrack, from = 1e6, to = 9e6, add53 = TRUE, add35 = TRUE, littleTicks = TRUE)
+
+# ☢️AnnotationTrack
+aTrack <- AnnotationTrack(start = c(10, 40, 120), width = 15, 
+                          chromosome = "chrX", 
+                          strand = c("+", "*", "-"),
+                          id = c("Huey", "Dewey", "Louie"), 
+                          genome = "hg19", name = "foo")
+plotTracks(aTrack)
+plotTracks(aTrack, shape = "box", featureAnnotation = "id")
+plotTracks(aTrack, shape = "ellipse", featureAnnotation = "id", 
+          fontcolor.feature = "darkblue")
+
+# Sequence Track
+library(BSgenome.Hsapiens.UCSC.hg19)
+strack <- SequenceTrack(Hsapiens, chromosome = chr)
+plotTracks(list(itrack, gtrack, atrack, grtrack, strack), 
+           from = 26591822, to = 26591852, cex = 0.8)
+
+# Data Point Track
+set.seed(255)
+lim <- c(26700000, 26750000)
+coords <- sort(c(lim[1], 
+                   sample(seq(from = lim[1], to = lim[2]), 99), 
+                   lim[2]))
+dat <- runif(100, min = -10, max = 10)
+dtrack <- DataTrack(data = dat, start = coords[-length(coords)],
+                        end = coords[-1], chromosome = chr, genome = gen, name = "Uniform")
+plotTracks(list(itrack, gtrack, atrack, grtrack, dtrack), 
+             from = lim[1], to = lim[2])
+
+plotTracks(list(itrack, gtrack, atrack, grtrack, dtrack), 
+           from = lim[1], to = lim[2], type = "histogram")
