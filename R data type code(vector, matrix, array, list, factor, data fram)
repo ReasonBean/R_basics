@@ -118,3 +118,22 @@ print(result) # result is vector
 result <- df[, "x", drop=F] # if drop = FALSE
 print(result) # result is data frame
 View(result)
+
+### Operators
+v1<-c(7,5,9)
+v2<-c(18,33,4)
+
+## remainder
+v1%%v2
+
+## quotient
+v1%/%v2
+
+## exponent
+v1^v2
+
+## identify belonging
+v1%in%v2
+
+## matrix multiply
+v1%*%v2 # 7*18+5*33+9*4
