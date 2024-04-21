@@ -1,0 +1,27 @@
+### statistical function
+sum(iris$Sepal.Length)
+min(iris$Sepal.Length)
+max(iris$Sepal.Length)
+range(iris$Sepal.Length)
+mean(iris$Sepal.Length)
+median(iris$Sepal.Length)
+sd(iris$Sepal.Length)
+fivenum(iris$Sepal.Length) # Min, Q1, Median, Q2, MAX
+
+num<-as.numeric(summary(iris$Sepal.Length)["Min."]) # Save the value from the summary
+num
+
+abs(iris$Sepal.Length)
+sqrt(iris$Sepal.Length)
+ceiling(iris$Sepal.Length)
+floor(iris$Sepal.Length)
+trunc(iris$Sepal.Length)
+round((iris$Sepal.Length), 0)
+log10(iris$Sepal.Length)
+log2(iris$Sepal.Length)
+exp(iris$Sepal.Length)
+factorial(iris$Sepal.Length) # factorial with integer
+
+cos(iris$Sepal.Length)
+sin(iris$Sepal.Length)
+tan(iris$Sepal.Length)
