@@ -1,0 +1,92 @@
+### R charts
+## pie chart
+counts <- c(10, 20, 30, 40)
+labels <- c("Red", "Blue", "Green", "Yellow")
+percent<-round(counts/sum(counts)*100)
+labels<-paste(labels, percent)
+labels<-paste0(labels,"%")
+pie(counts, labels, main = "Pie Chart Practice")
+
+colors<-rainbow(length(labels))
+pie(counts, labels = labels, col = colors, main = "Adjusted Pie Chart", init.angle = 90, clockwise = TRUE) # Set the starting angle to 90 degrees and list the pieces counterclockwise
+
+### scatter plot
+input <- mtcars[,c("wt","mpg")] # sample data
+
+plot(input$wt, input$mpg, main = "Basic Scatter Plot", xlab = "Weight", ylab = "Milage", xlim=c(2.5, 5), ylim=c(15,30),
+     pch = 19, col = "blue") # pch is circle
+
+abline(lm(input$mpg~input$wt)) # regression line
+
+### box plot
+# Creating a box plot of mpg according to the number of cylinders (cyl)
+boxplot(mpg ~ cyl, data = mtcars,
+        main = "Miles Per Gallon by Number of Cylinders",
+        xlab = "Number of Cylinders",
+        ylab = "Miles Per Gallon (mpg)",
+        col = c("lightblue", "lightgreen", "lightcoral"))
+
+### histogram
+hist(mtcars$mpg, freq = FALSE, breaks = 12, col = "lightblue", # y axis is set density
+     main = "Histogram of MPG with Density Curve",
+     xlab = "Miles Per Gallon (MPG)",
+     border = "lightblue")
+dens <- density(mtcars$mpg)
+lines(dens, type="l", col = "red", lwd = 2) # add to density curve
+grid() # grid
+
+plot(dens) # Density Plot
+polygon(dens, col = "lightblue", border = "lightblue")
+
+### complex plot
+## normal legend
+x <- mtcars$wt
+y <- mtcars$mpg
+
+plot(x, y, type = "o",      # point with lines
+     main = "MPG vs Weight",
+     xlab = "Weight (1000 lbs)",
+     ylab = "Miles per Gallon",
+     col = "blue",          # color
+     lty = 2,               # line type
+     lwd = 2,               # line width
+     cex = 1.2,             # character expansion
+     frame = FALSE)         # remove outer line
+
+legend("topright",           # legend position
+       legend = "MPG vs Weight", # legend text
+       col = "blue",         # legend color
+       lty = 2,              # legend line type
+       lwd = 2,              # legend line width
+       cex = 0.8)            # legend character expansion
+
+## upgrade legend
+plot(mtcars$wt, mtcars$mpg, type = "o", col = "blue", lty = 1,
+     main = "MPG and Horsepower vs Weight",
+     xlab = "Weight (1000 lbs)", ylab = "Value",
+     ylim = c(min(mtcars$mpg, mtcars$hp), max(mtcars$mpg, mtcars$hp)))
+
+# line graph
+lines(mtcars$wt, mtcars$hp, type = "o", col = "red", lty = 2)
+
+# legend with 2 variable
+legend("topright", legend = c("MPG", "Horsepower"), 
+       col = c("blue", "red"), lty = c(1, 2), cex = 0.8)
+
+# par(mfrow=c(3,2))
+# par(mfrow=c(1,1))
+
+### Layout
+# Data preparation
+x <- 1:10
+y1 <- x^2
+y2 <- log(x)
+y3 <- sqrt(x)
+
+# Graphic layout settings
+layout(matrix(c(1,1,2,3), nrow=2, byrow=TRUE))
+
+# Draw a graph
+plot(x, y1, main="Area 1: x squared") # it shows rectangular
+plot(x, y2, main="Area 2: log(x)")
+plot(x, y3, main="Area 3: sqrt(x)")
