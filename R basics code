@@ -12,7 +12,7 @@ d <- T:3 # 1 2 3, T is 1
 
 ## vector sequence
 sequence1 <- seq(from = 1, to = 10)
-sequebce2 <- sequence2 <- seq(from = 1, to = 10, by = 2) # Generate a sequence from 1 to 10, incrementing by 2
+sequence2 <- seq(from = 1, to = 10, by = 2) # Generate a sequence from 1 to 10, incrementing by 2
 sequence3 <- seq(from = 1, to = 10, length.out = 5) # Generate a sequence from 1 to 10 with a length of 5
 
 ## vector replication
@@ -30,7 +30,7 @@ original_vector <- c(1, 2, 4, 5) # Original vector
 new_vector <- append(original_vector, 3, after = 2) # Append the number 3 after the second position, 1, 2, 3, 4, 5
 
 original_vector <- c(1, 2, 3, 4, 5) # Original vector
-replaced_vector <- replace(original_vector, list = c(2, 5), values = c(20, 50)) # Replace the second and fifth elements with 20 and 50, 1, 20, 3, 4, 50
+replaced_vector <- replace(original_vector, list = c(2, 5), values = c(20, 50)) # Replace the second and fifth elements with 20 and 50, result: 1, 20, 3, 4, 50
 
 ## names()
 fruits <- c(10, 15, 5, 20) # Create and name a vector
@@ -68,6 +68,8 @@ mat[-2,] # Delete row index number 2
 t(mat) # transform to transpose
 c(mat) # transform to vector
 as.vector(mat) # transform to vector
+as.matrix()
+as.numeric()
 
 ### array
 data_vector <- 1:12 # Create a three-dimensional array
@@ -94,6 +96,7 @@ my.df <- data.frame( # Create a data frame
   Age = c(25, 30, 35),
   Salary = c(50000, 60000, 70000),
   row.names = c("a", "b", "c")
+  # no col.names, please don't get confused.
 )
 
 ## data frame indexing
@@ -101,7 +104,9 @@ my.df[["Name"]] # my.df[[1]] = my.df$Name
 my.df["a",1:2] # similar to matrix
 
 ## iris data set
-iris[iris$Species=="setosa",]
+iris[iris$Species=="setosa",] # setosa
+iris[iris$Species!="setosa",] # not setosa
+
 mod<-iris[iris$Species=="setosa", c("Sepal.Length", "Species")] # Sepal.Length and Species with setosa
 
 chg<-cbind(mod, number=seq(1:50)) # binding new column
@@ -180,7 +185,7 @@ lapply(iris[,1:4], mean) # return to list
 ## sapply
 sapply(iris[,1:4], mean, simplify = F) # it is same to apply(iris[,1:4], 2, mean)
 
-## tapply
+## ⭐tapply
 tapply(iris$Sepal.Length, iris$Species, mean) # Function is applied to each index for data
 
 ### statistical function
@@ -244,6 +249,28 @@ plot(input$wt, input$mpg, main = "Basic Scatter Plot", xlab = "Weight", ylab = "
      pch = 19, col = "blue") # pch is circle
 
 abline(lm(input$mpg~input$wt)) # regression line
+
+# enhanced scatter plot
+plot(input$wt, input$mpg,
+     main = "Scatter Plot of Weight vs Mileage",
+     xlab = "Weight (1000 lbs)",
+     ylab = "Mileage (mpg)",
+     xlim = c(2.5, 5),
+     ylim = c(15, 30),
+     pch = 21,             # 더 시각적으로 매력적인 포인트 모양
+     bg = "blue",          # 포인트 색상
+     cex = 1.5,            # 포인트 크기
+     col = "black"         # 포인트 테두리 색상
+)
+
+# 회귀선 추가
+reg_model <- lm(input$mpg ~ input$wt)
+abline(reg_model, col = "red", lwd = 2)  # 두껍고 눈에 띄는 선
+
+# 회귀선 상세 추가 (텍스트)
+coef_info <- paste("Slope:", round(coef(reg_model)[2], 2),
+                   "\nIntercept:", round(coef(reg_model)[1], 2))
+text(3.8, 25, labels = coef_info, col = "red")
 
 ### box plot
 # Creating a box plot of mpg according to the number of cylinders (cyl)
@@ -327,7 +354,7 @@ nchar(str) #  1 1 1 1 1
 
 str[3:4]<-c("Yes", "No")
 
-nchar(str) # 1 1 3 2 1
+nchar(str) #⭐ 1 1 3 2 1
 length(str) # 5
 
 ## String connection(paste)
@@ -339,7 +366,7 @@ cat(str.paste, sep="\n") # line by line print
 
 paste(1:3, " (which is ", c(10,20,30), " %)", sep = "") # same result, it is more intuitive
 
-seq<-paste0(gcf.fna$NC_045512.2, collapse = "") # collapse is important to handle the sequence data
+seq<-paste(gcf.fna$NC_045512.2, collapse = "") # collapse is important to handle the sequence data
 unique_bases<-unique(gcf.fna$NC_045512.2) # unique element print
 
 ## String split
@@ -372,7 +399,16 @@ grep("a", x)
 grepl("a", x) # return to logical value included in 'a'
 
 regexpr("a", x) # The regexpr() function returns the length of the character that matches the position of the first part of the string that matches the pattern.
-index.x<-gregexpr("a", x, ) # The gregexpr() is similar to regexpr(), but returns the position and length of all parts that match the pattern throughout the string.
+index.x<-gregexpr("a", x) # The gregexpr() is similar to regexpr(), but returns the position and length of all parts that match the pattern throughout the string.
+index.x
+
+# 문자열 정의
+sequence <- "agcagccctcggcggcccggggggcgggcggcggtgcccgtcccggggctgcgcgaggcacaggcg"
+
+library(stringr)
+# 'a'의 개수 계산
+count_a <- str_count(sequence, "a") # 개수 계산 식
+gregexpr("a", sequence)
 
 for (ii in 1:length(index.x[[2]])){ # we cab find each 'a' position
   print(index.x[[2]][ii])
@@ -450,6 +486,22 @@ dplyr::summarise(group_by(iris, Species), Avg_Sepal_Length = mean(Sepal.Length),
                  Avg_Petal_Length = mean(Petal.Length),
                  Avg_Petal_Width = mean(Petal.Width))
 
+# distinct, unique
+
+# 예제 데이터 프레임 생성
+data <- data.frame(
+  Name = c("Alice", "Bob", "Charlie", "Bob", "Alice"),
+  Age = c(25, 30, 35, 30, 25),
+  stringsAsFactors = FALSE
+)
+
+# 중복 제거 및 고유 행 개수 세기
+unique_rows <- dplyr::distinct(data)
+num_unique_rows <- nrow(unique_rows)
+
+# 결과 출력
+print(num_unique_rows)
+
 # join
 df1 <- data.frame(
   ID = c(1, 2, 3, 4),
@@ -523,7 +575,7 @@ annots <- AnnotationDbi::select(org.Hs.eg.db,
                  keytype="ENTREZID")
 
 # 첫 번째 데이터프레임에서는 Row names가 두 번째 데이터프레임에서는 ENTREZID가 서로 조인속성임을 의미
-# 두 데이터프레임의 조인속성 이름이 다르기 때문에 by.x, by.y로 지정해준것것
+# 두 데이터프레임의 조인속성 이름이 다르기 때문에 by.x, by.y로 지정해준것
 resultTable<-merge(resultTable, annots, by.x=0, by.y="ENTREZID") 
 View(resultTable)
 
@@ -582,9 +634,10 @@ ggplot(data = mtcars, aes(x = hp, y = mpg)) +
   theme_minimal()  # 미니멀 테마 적용
 
 # aesthetic 3: grid line과 axis text customizing
-p7<-ggplot(data = mtcars, aes(x = hp, y = mpg)) +
-  geom_point(aes(color = hp, size = hp)) +
-  scale_color_gradient(low = "blue", high = "red") +
+p7 <- ggplot(data = mtcars, aes(x = hp, y = mpg)) +
+  geom_point(aes(color = hp, size = hp)) +  # 산점도
+  geom_smooth(method = "lm", se = TRUE, color = "black") +  # 선형 회귀선 추가
+  scale_color_gradient(low = "blue", high = "red") +  # 색상 그라디언트
   labs(title = "Scatter Plot of MPG vs Horsepower",
        x = "Horsepower",
        y = "Miles per Gallon") +
@@ -599,6 +652,7 @@ p7<-ggplot(data = mtcars, aes(x = hp, y = mpg)) +
 # asethetic 4: legend 설정
 ggplot(data = mtcars, aes(x = hp, y = mpg)) +
   geom_point(aes(color = hp, size = hp)) +
+  geom_smooth(method = "lm", se = TRUE, color = "black") +  # 선형 회귀선 추가
   scale_color_gradient(low = "blue", high = "red") +
   labs(title = "Scatter Plot of MPG vs Horsepower",
        x = "Horsepower",
